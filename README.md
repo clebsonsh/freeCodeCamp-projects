@@ -1,2 +1,3 @@
-# freeCodeCamp-tribute-page
-freeCodeCamp Tribute Page Project
+# freeCodeCamp Tribute Page Project
+
+Live preview: https://codepen.io/clebsonmoura/full/bjOzod/
