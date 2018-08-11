@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FFC: Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <h1 id="title">Survey Title</h1>
+  <main>
+    <p id="description">Sturvey description</p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Name:</label>
+      <input type="text" name="name" id="name" placeholder="Enter your name" required>
+
+      <label for="email" id="email-label">E-mail:</label>
+      <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
+
+      <label for="number" id="number-label">Age:</label>
+      <input type="number" name="number" id="number" min="1" max="99" placeholder="Age">
+
+      <label for="dropdown">Dropdown Placeholder Label</label>
+      <select name="dropdown" id="dropdown">
+        <option value="" disabled selected>Select an Option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+
+      <fieldset>
+        <legend>Radio Group Placeholder Legend</legend>
+
+        <input type="radio" name="radio" id="radio1" value="radio1">
+        <label for="radio1">Radio 1</label>
+
+        <input type="radio" name="radio" id="radio2" value="radio2">
+        <label for="radio2">Radio 2</label>
+
+        <input type="radio" name="radio" id="radio3" value="radio3">
+        <label for="radio3">Radio 3</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Checkbox Group Placeholder Legend</legend>
+
+        <input type="checkbox" name="check" id="check1" value="check1">
+        <label for="check1">Check 1</label>
+
+        <input type="checkbox" name="check" id="check2" value="check2">
+        <label for="check2">Check 2</label>
+
+        <input type="checkbox" name="check" id="check3" value="check3">
+        <label for="check3">Check 3</label>
+
+      </fieldset>
+
+      <label for="textarea">Textarea Placeholder Label</label>
+      <textarea name="textarea" id="textarea"></textarea>
+      <button id="submit">Submit</button>
+    </form>
+  </main>
+<body>
+</body>
+</html>
