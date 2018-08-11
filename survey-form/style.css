@@ -1,0 +1,81 @@
+.wrapper{
+  width: 60vw;
+  margin: 50px auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+#title {
+  font-size: 3em;
+}
+
+#main {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#main * {
+  font-size: 1.1em;
+}
+
+#survey-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+#survey-form > *:nth-child(odd) {
+  justify-self: end;
+  align-self: center;
+}
+
+#survey-form > *:nth-child(even) {
+  padding: 10px;
+}
+
+#survey-form div.form-group {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+}
+
+#textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+#survey-form button#submit {
+  grid-column: 2 / 3;
+  margin: 10px 0 0;
+  padding: 10px 30px;
+  font-size: 1.5em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #survey-form {
+    grid-template-columns: 1fr;
+  }
+  #survey-form > *:nth-child(odd) {
+    justify-self: start;
+  }
+
+  #survey-form button#submit {
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+}
