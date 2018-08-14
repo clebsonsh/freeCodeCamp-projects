@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  height: 50000px;
+  margin-top: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-wrapper {
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.5);
+}
+
+#header {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#brand {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+#header-img {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.nav-link {
+  margin-left: 5px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.menu-toggle {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  padding: 5px 15px;
+  display: none;
+  cursor: pointer;
+}
+
+.menu-hamburger {
+  background-color:rgba(0, 0, 0, 0.5); 
+  height: 2px;
+  width: 24px;
+}
+
+.menu-hamburger::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color:rgba(0, 0, 0, 0.5); 
+  height: 2px;
+  width: 24px;
+  top: 12px;
+}
+
+.menu-hamburger::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color:rgba(0, 0, 0, 0.5); 
+  height: 2px;
+  width: 24px;
+  top: 24px;
+}
+
+/* 
+  Utility classes
+*/
+
+.container{
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative;
+}
+
+.text-pink {
+  color: #ff7a5a;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-wrapper {
+    max-height: 80px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .show-menu {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #nav-bar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+  }
+  .nav-link {
+    padding: 15px 0;
+    margin-left: 0px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .container {
+    max-width: 512px;
+    padding: 0 15px;
+  }
+}
