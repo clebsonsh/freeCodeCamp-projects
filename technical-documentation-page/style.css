@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+.wrapper > * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 350px;
+  padding: 20px 40px;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+#nav-header h1 {
+  font-size: 28px;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  color: rgba(0, 0, 0, 0.7);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.nav-link h2 {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+#main-doc {
+  margin-left: 350px;
+  padding: 20px 40px;
+}
+
+a {
+  color: #42b983;
+  text-decoration: none;
+}
+
+code#index {
+  padding: 2px;
+  color: red;
+  background-color: #eee;
+}
+
+pre {
+  position: relative;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.code-block::before {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.code-html::before {
+  content: 'HTML';
+}
+
+.code-js::before {
+  content: 'JS';
+}
+
+.code-comment {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.code-tag {
+  color: #2973b7;
+}
+
+.code-string {
+  color: #42b983;
+}
+
+.code-reserved-word {
+  color: red;
+}
+
+.code-boolean {
+  color: purple;
+}
+
+.result {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+@media screen and (max-width: 820px) {
+  #sidebar{
+    position: static;
+    width: auto;
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  }
+
+  #main-doc {
+    margin-left: 0px;
+  }
+}

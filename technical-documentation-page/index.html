@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Documentation Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+
+    <header id="sidebar">
+      <nav id="navbar">
+        <header id="nav-header">
+          <h1>Vue Documentation</h1>
+        </header>
+  
+        <a href="#Introduction" class="nav-link">
+          <h2>Introduction</h2>
+        </a>
+  
+        <a href="#What_you_should_already_know" class="nav-link">
+          <h2>What you should already know</h2>
+        </a>
+  
+        <a href="#Getting_Started" class="nav-link">
+          <h2>Getting Started</h2>
+        </a>
+  
+        <a href="#Declarative_Rendering" class="nav-link">
+          <h2>Declarative Rendering</h2>
+        </a>
+  
+        <a href="#Conditionals_and_Loops" class="nav-link">
+          <h2>Conditionals and Loops</h2>
+        </a>
+
+        <a href="#Reference" class="nav-link">
+          <h2>Reference</h2>
+        </a>
+      </nav>
+    </header>
+    
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>
+          <h2>Introduction</h2>
+        </header>
+        <article>
+          <h3>What is Vue.js?</h3>
+  
+          <p>
+              Vue (pronounced /vjuː/, like view) is a progressive framework for
+              building user interfaces. Unlike other monolithic frameworks, Vue is
+              designed from the ground up to be incrementally adoptable. The core
+              library is focused on the view layer only, and is easy to pick up and
+              integrate with other libraries or existing projects. On the other
+              hand, Vue is also perfectly capable of powering sophisticated
+              Single-Page Applications when used in combination with
+  
+              <a href="https://vuejs.org/v2/guide/single-file-components.html"
+                target="_blank">
+                modern tooling
+              </a>
+              
+              and
+  
+              <a href="https://github.com/vuejs/awesome-vue#components--libraries"
+                target="_blank">supporting libraries</a>.
+          </p>
+        </article>
+      </section>
+  
+      <section class="main-section" id="What_you_should_already_know">
+        <header>
+          <h2>What you should already know</h2>
+        </header>
+        <article>
+          <p>
+            The official guide assumes intermediate level knowledge of:
+          </p>
+  
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+  
+          <p>
+              If you are totally new to frontend development, it might not be the
+              best idea to jump right into a framework as your first step - grasp
+              the basics then come back! Prior experience with other frameworks
+              helps, but is not required.
+          </p>
+        </article>
+      </section>
+  
+      <section class="main-section" id="Getting_Started">
+        <header>
+          <h2>Getting Started</h2>
+        </header>
+        <article>
+          <p>
+              The easiest way to try out Vue.js is using the
+              <a href="https://jsfiddle.net/chrisvfritz/50wL7mdz/"
+                target="_blank">
+                JSFiddle Hello World example</a>.
+              Or, you can create an
+              <code id="index">index.html</code> file and include Vue with: 
+          </p>
+  
+          <code>
+
+  <pre class="code-block code-html">
+
+    <span class="code-comment">&lt;!-- development version, includes helpful console warnings --&gt;</span>
+    <span class="code-tag">&lt;script src=<span class="code-string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;&lt;/script&gt;</span>
+  </pre>
+
+          </code>
+
+          <p>or:</p>
+
+          <code>
+
+  <pre class="code-block code-html">
+    
+    <span class="code-comment">&lt;!-- production version, optimized for size and speed --&gt;</span>
+    <span class="code-tag">&lt;script src=<span class="code-string">"https://cdn.jsdelivr.net/npm/vue"</span>&gt;&lt;/script&gt;</span>
+  </pre>
+
+          </code>
+        </article>
+      </section>
+  
+      <section class="main-section" id="Declarative_Rendering">
+        <header>
+          <h2>Declarative Rendering</h2>
+        </header>
+        <article>
+          <p>
+              At the core of Vue.js is a system that enables us to declaratively
+              render data to the DOM using straightforward template syntax:
+          </p>
+  
+          <code>
+
+  <pre class="code-block code-html">
+
+    <span class="code-tag">&lt;div id=<span class="code-string">"app"</span>&gt</span>
+      {{ message }}
+    <span class="code-tag">&lt;/div&gt;</span>
+  </pre>
+
+          </code>
+
+          <code>
+
+  <pre class="code-block code-js">
+
+    <span class="code-reserved-word">var</span> app = <span class="code-reserved-word">new</span> Vue({
+      el: <span class="code-string">'#app'</span>,
+      data: {
+        message: <span class="code-string">'Hello Vue!'</span>
+      }
+    })
+  </pre>
+
+          </code>
+          
+          <div class="result">
+            Hello Vue!
+          </div>
+  
+          <p>
+              We have already created our very first Vue app! This looks pretty
+              similar to rendering a string template, but Vue has done a lot of
+              work under the hood. The data and the DOM are now linked, and
+              everything is now reactive. 
+          </p>
+        </article>
+      </section>
+  
+      <section class="main-section" id="Conditionals_and_Loops">
+        <header>
+          <h2>Conditionals and Loops</h2>
+        </header>
+        <article>
+          <p>
+            It’s easy to toggle the presence of an element, too:
+          </p>
+  
+          <code>
+
+  <pre class="code-block code-html">
+
+    <span class="code-tag">&lt;div id=<span class="code-string">"app"</span>&gt</span>
+      <span class="code-tag">&lt;span v-f=</span><span class="code-string">"seen"</span><span class="code-tag">&gt;</span>Now you see me<span class="code-tag">&lt;/span&gt;</span>
+    <span class="code-tag">&lt;/div&gt;</span>
+  </pre>
+
+          </code>
+
+          <code>
+
+  <pre class="code-block code-js">
+
+    <span class="code-reserved-word">var</span> app = <span class="code-reserved-word">new</span> Vue({
+      el: <span class="code-string">'#app'</span>,
+      data: {
+        seen: <span class="code-boolean">true</span>
+      }
+    })
+  </pre>
+
+          </code>
+  
+          <div class="result">
+            Now you see me
+          </div>
+  
+          <p>
+            This example demonstrates that we can bind data to not only text and
+            attributes, but also the structure of the DOM. Moreover, Vue also
+            provides a powerful transition effect system that can automatically
+            apply transition effects when elements are inserted/updated/removed
+            by Vue.
+          </p>
+  
+          <p>
+            There are quite a few other directives, each with its own special
+            functionality. For example, the v-for directive can be used for
+            displaying a list of items using the data from an Array:
+          </p>
+  
+          <code>
+
+  <pre class="code-block code-html">
+
+    <span class="code-tag">&lt;div id=<span class="code-string">"app"</span>&gt
+      &lt;ol&gt;
+        &lt;li v-for=<span class="code-string">"todo in todos"</span>&gt;</span>
+          {{ todo.text }}
+        <span class="code-tag">&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;</span>
+  </pre>
+
+          </code>
+
+          <code>
+
+  <pre class="code-block code-js">
+
+    <span class="code-reserved-word">var</span> app = <span class="code-reserved-word">new</span> Vue({
+      el: <span class="code-string">'#app'</span>,
+      data: {
+        todos: [
+          { text: <span class="code-string">'Learn JavaScript'</span> },
+          { text: <span class="code-string">'Learn Vue'</span> },
+          { text: <span class="code-string">'Build something awesome'</span> }
+        ]
+      }
+    })
+  </pre>
+
+          </code>
+  
+          <div class="result">
+            <ol>
+              <li>Learn JavaScript</li>
+              <li>Learn Vue</li>
+              <li>Build something awesome</li>
+            </ol>
+          </div>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>
+          <h2>Reference</h2>
+        </header>
+        <article>
+          <p>
+            All the documentation in this page is taken form
+              <a href="https://vuejs.org/v2/guide/">Vue.js</a>
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
