@@ -1,5 +1,5 @@
 const Quote = ({quote: {text, author}}) =>
-  <div>
+  <div id='quote'>
     <p id='text'>{text}</p>
     <p id='author'>- {author}</p>
   </div>
@@ -16,14 +16,12 @@ class QuoteBox extends React.Component {
       quotes: []
     }
 
-    this.getRandomQuote = this.getRandomQuote.bind(this)
-  }
-
-  getRandomQuote () {
-    let randomQuoteIndex = Math.floor(Math.random() * this.state.quotes.length)
-    this.setState({
-      quote: this.state.quotes[randomQuoteIndex]
-    })
+    this.getRandomQuote = () => {
+      let randomQuoteIndex = Math.floor(Math.random() * this.state.quotes.length)
+      this.setState({
+        quote: this.state.quotes[randomQuoteIndex]
+      })
+    }
   }
 
   componentDidMount () {
