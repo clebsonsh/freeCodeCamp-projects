@@ -2,6 +2,8 @@
 
 Responsive Web Design => https://www.freecodecamp.org/certification/clebsonsh/responsive-web-design
 
+JavaScript Algorithms and Data Structures => https://www.freecodecamp.org/certification/clebsonsh/javascript-algorithms-and-data-structures
+
 # freeCodeCamp Projects
 
 Tribute Page => https://codepen.io/clebsonmoura/full/bjOzod/
