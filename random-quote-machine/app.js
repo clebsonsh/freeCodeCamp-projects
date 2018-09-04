@@ -1,8 +1,16 @@
 const Quote = ({quote: {text, author}}) => {
+  const textStyle = {
+    fontSize: 20
+  }
+
+  const authorStyle = {
+    textAlign: 'right'
+  }
+
   return (
     <div>
-      <p id='text'>{text}</p>
-      <p id='author'>-{author}</p>
+      <p style={textStyle} id='text'>{text}</p>
+      <p style={authorStyle} id='author'>- {author}</p>
     </div>
   )
 }
@@ -39,9 +47,25 @@ class QuoteBox extends React.Component {
   }
 
   render () {
+    let text = this.state.quote.text
+    let author = this.state.quote.author
+
+    const quoteBoxStyle = {
+      margin: 20,
+      padding: 80,
+      backgroundColor: 'white',
+      borderRadius: 10
+    }
+
     return (
-      <div id='quote-box'>
+      <div id='quote-box' style={quoteBoxStyle}>
         <Quote quote={this.state.quote} />
+        <button id='new-quote' onClick={this.getRandomQuote}>Random quote</button>
+        <a
+          id='tweet-quote'
+          href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${text} - ${author}`}>
+          Share on Twitter
+        </a>
       </div>
     )
   }
