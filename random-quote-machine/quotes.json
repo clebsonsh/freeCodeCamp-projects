@@ -1,0 +1,94 @@
+[
+  {
+    "text": "One of my most productive days was throwing away 1,000 lines of code.",
+    "author": "Ken Thompson"
+  },
+  {
+    "text": "I have always wished for my computer to be as easy to use as my telephone; my wish has come true because I can no longer figure out how to use my telephone.",
+    "author": "Bjarne Stroustrup"
+  },
+  {
+    "text": "When in doubt, use brute force.",
+    "author": "Ken Thompson"
+  },
+  {
+    "text": "Talk is cheap. Show me the code.",
+    "author": "Linus Torvalds"
+  },
+  {
+    "text": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.",
+    "author": "Martin Golding"
+  },
+  {
+    "text": "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.",
+    "author": "Linus Torvalds"
+  },
+  {
+    "text": "Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves.",
+    "author": "Alan Kay"
+  },
+  {
+    "text": "Most of you are familiar with the virtues of a programmer. There are three, of course: laziness, impatience, and hubris",
+    "author": "Larry Wall"
+  },
+  {
+    "text": "First learn computer science and all the theory. Next develop a programming style. Then forget all that and just hack.",
+    "author": "George Carrette"
+  },
+  {
+    "text": "I don't care if it works on your machine! We are not shipping your machine!",
+    "author": "Vidiu Platon"
+  },
+  {
+    "text": "Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter.",
+    "author": "Eric S. Raymond"
+  },
+  {
+    "text": "When someone says: 'I want a programming language in which I need only say what I wish done', give him a lollipop.",
+    "author": "Alan J. Perlis"
+  },
+  {
+    "text": "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.",
+    "author": "Christopher Thompson"
+  },
+  {
+    "text": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
+    "author": "Brian W. Kernighan"
+  },
+  {
+    "text": "People think that computer science is the art of geniuses but the actual reality is the opposite, just many people doing things that build on each other, like a wall of mini stones.",
+    "author": "Donald Knuth"
+  },
+  {
+    "text": "If debugging is the process of removing software bugs, then programming must be the process of putting them in.",
+    "author": "Edsger Dijkstra"
+  },
+  {
+    "text": " Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+    "author": "Martin Fowler"
+  },
+  {
+    "text": "Programs must be written for people to read, and only incidentally for machines to execute",
+    "author": "Abelson / Sussman"
+  },
+  {
+    "text": "When debugging, novices insert corrective code; experts remove defective code.",
+    "author": "Richard Pattis"
+  },
+  {
+    "text": "There are 2 hard problems in computer science: cache invalidation, naming things, and off-by-1 errors.",
+    "author": "Leon Bambrick"
+  },
+  {
+    "text": "There are only two kinds of languages: the ones people complain about and the ones nobody uses",
+    "author": "Bjarne Stroustrup"
+  },
+  {
+    "text": "It's all talk until the code runs.",
+    "author": "Ward Cunningham"
+  },
+  {
+    "text": "One man’s crappy software is another man’s full time job",
+    "author": "Jessica Gaston"
+  }
+]
