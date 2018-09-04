@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 #root {
   height: 100vh;
@@ -10,4 +13,56 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#quote-box {
+  width: 600px;
+  margin: 20px;
+  padding: 60px 60px 0px 60px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+#quote-box:hover {
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.btn {
+  background-color: #00B2A0;
+  margin: 0px auto 5px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 170px;
+  border: 4px solid #00B2A0;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+
+.btn:hover {
+  border-color: #7CD8C9;
+  cursor: pointer;
+}
+
+#text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#author {
+  text-align: right;
+}
+@media screen and (max-width: 550px) {
+  .btn-group {
+    flex-direction: column;
+  }
 }

@@ -1,19 +1,8 @@
-const Quote = ({quote: {text, author}}) => {
-  const textStyle = {
-    fontSize: 20
-  }
-
-  const authorStyle = {
-    textAlign: 'right'
-  }
-
-  return (
-    <div>
-      <p style={textStyle} id='text'>{text}</p>
-      <p style={authorStyle} id='author'>- {author}</p>
-    </div>
-  )
-}
+const Quote = ({quote: {text, author}}) =>
+  <div>
+    <p id='text'>{text}</p>
+    <p id='author'>- {author}</p>
+  </div>
 
 class QuoteBox extends React.Component {
   constructor (props) {
@@ -50,22 +39,15 @@ class QuoteBox extends React.Component {
     let text = this.state.quote.text
     let author = this.state.quote.author
 
-    const quoteBoxStyle = {
-      margin: 20,
-      padding: 80,
-      backgroundColor: 'white',
-      borderRadius: 10
-    }
-
     return (
-      <div id='quote-box' style={quoteBoxStyle}>
+      <div id='quote-box'>
         <Quote quote={this.state.quote} />
-        <button id='new-quote' onClick={this.getRandomQuote}>Random quote</button>
-        <a
-          id='tweet-quote'
-          href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${text} - ${author}`}>
-          Share on Twitter
-        </a>
+        <div className='btn-group'>
+          <a id='tweet-quote' className='btn' href={`https://twitter.com/intent/tweet?hashtags=freeCodeCamp,randomQuotesMachine&text=${text} - ${author}`}>
+            Share on Twitter
+          </a>
+          <a id='new-quote' className='btn' onClick={this.getRandomQuote}>New random quote</a>
+        </div>
       </div>
     )
   }
