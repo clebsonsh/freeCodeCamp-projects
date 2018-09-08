@@ -59,7 +59,7 @@ class MarkdownPreviewer extends React.Component {
     this.setState({ text: event.target.value })
 
   mdToHTML = str =>
-    ({ __html: marked(str) });
+    ({ __html: marked(str) })
 
   render = () =>
     <div id='markdown-previewer-wrapper'>
