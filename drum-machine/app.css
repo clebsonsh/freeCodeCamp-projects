@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+#root {
+  /* Photo by Drew Sal on Unsplash */
+  background-image: url('https://raw.githubusercontent.com/clebsonsh/freeCodeCamp-projects/master/drum-machine/images/drums.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#drum-pads {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+}
+
+#display {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+#display,
+.drum-pad {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  border: 1px solid black;
+}
+.drum-pad span {
+  user-select: none;
+  display: block;
+  padding: 15px;
+}
