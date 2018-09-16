@@ -72,9 +72,53 @@ textarea:focus {
   box-shadow: 0 2px var(--base-color)
 }
 
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  box-shadow: none;
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute;
+  display: none;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  margin-left: 25px;
+}
+
+input[type="radio"] + label::before,
+input[type="radio"] + label::after {
+  border-radius: 100%;
+}
+
+input[type="radio"] + label::before,
+input[type="checkbox"] + label::before {
+  content: '';
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: -25px;
+  display: inline-block;
+  border: 2px solid var(--base-color);
+}
+
+input[type="radio"] + label::after,
+input[type="checkbox"] + label::after {
+  content: '';
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  left: -22px;
+  top: 3px;
+  display: inline-block;
+  background-color: var(--darker-color);
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+input[type="radio"]:checked + label::after,
+input[type="checkbox"]:checked + label::after {
+  transform: scale(1);
 }
 
 select:required:invalid,
